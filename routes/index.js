@@ -7,6 +7,8 @@ var mqtt_url = process.env.CLOUDMQTT_URL || 'mqtt://localhost:1883';
 var topic = process.env.CLOUDMQTT_TOPIC || 'test';
 var client = mqtt.connect(mqtt_url);
 
+console.log(mqtt_url);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var config =  url.parse(mqtt_url);

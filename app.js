@@ -1,3 +1,11 @@
+/*******************************************************************
+*NAME: ANTOINE AUGER-MAROUN, CARL GENEST
+*DATE: 26/03/2021
+*OBJECT: Fichier de base pour la gestion du serveur
+*FICHIER: app.js
+/*******************************************************************/
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -19,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(process.env.PORT, '0.0.0.0');
+
 
 app.use('/', indexRouter);
 
