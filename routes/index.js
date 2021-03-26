@@ -3,7 +3,7 @@ var mqtt = require('mqtt');
 var router = express.Router();
 var url = require('url');
 
-var mqtt_url = process.env.CLOUDMQTT_URL || 'mqtt://localhost:1883';
+var mqtt_url = "mqtt://c64-broker.herokuapp.com/" || 'mqtt://localhost:1883';
 var topic = process.env.CLOUDMQTT_TOPIC || 'test';
 var client = mqtt.connect(mqtt_url);
 
