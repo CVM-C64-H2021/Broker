@@ -3,6 +3,8 @@ var mqtt = require('mqtt');
 var router = express.Router();
 var url = require('url');
 
+require('dotenv').config()
+
 var mqtt_url = process.env.CLOUDMQTT_URL || 'mqtt://localhost:1883';
 var topic = process.env.CLOUDMQTT_TOPIC || 'test';
 var client = mqtt.connect(mqtt_url);
